@@ -161,4 +161,5 @@ legend {
 /*media queries*/
 @media only screen and (max-width: 768px) {
   #main-title {margin: 8rem 0};
+  #card-services {line-height: 1rem};
 }
