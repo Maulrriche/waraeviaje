@@ -1,0 +1,164 @@
+html{
+	box-sizing: border-box;
+	font-size: 15px;
+  
+}
+
+*, *::after, *::before {
+	box-sizing: inherit;
+  boder: 1px solid black;
+  
+}
+
+body {
+  background-image: url("bgimage.jpg");
+  background-size: 100vw;
+  background-repeat: none;
+}
+
+#title-icon {
+  font-family: "Lilita One", sans-serif;
+  padding: 0 1rem;
+  font-size: 3svw;
+  font-weight: lighter;
+  text-align: center;
+  max-width: max-content;
+  color: #ddd;
+}
+.topnav {
+    overflow: hidden;
+    background: rgb(13,182,215);
+    background: radial-gradient(circle, rgba(13,182,215,1) 0%, rgba(31,73,227,1) 50%, rgba(99,195,240,1) 100%);
+    position: relative;
+  }
+  
+  .topnav #myLinks {
+    display: none;
+  }
+  
+  .topnav a {
+    color: white;
+    padding: 1.6rem;
+    text-decoration: none;
+    font-size: 4vh;
+    display: block;
+  }
+  #icon {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+  }
+  
+  .topnav a.icon {
+    max-width: max-content;
+  }
+  .topnav a.icon:hover {
+  animation: shaking 0.5s infinite;
+}
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    cursor: pointer;
+  }
+
+  /*titulo*/
+
+  #main-title {
+    margin: 13rem 0;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 6svw;
+    color: antiquewhite;
+  }
+
+  /*carta de presentacion viajes*/
+
+  #places-card {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 10px 10px; 
+    justify-content: center; 
+    align-content: center; 
+    width: 100%;
+}
+
+  #places-card img{
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  #margarita {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #colonia-tovar {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  
+  #merida {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .scroll {
+    transform: translateY(-30px);
+   opacity: 0;
+   transition: 1s;
+ }
+
+ .scroll--show {
+   transform: translateY(0px);
+   opacity: 1;
+ }
+
+legend {
+  text-align: center;
+  color: #ddd;
+  padding: 1.8rem;
+  font-size: 3svw;
+  font-weight: bold;
+}
+
+/*informacion*/
+#card-services {
+  margin: 0 auto;
+  max-width: 60svw;
+  border: 0.5rem solid white;
+  border-radius: 30px;
+  background-color: #A6E1F7;
+  color: #4554D6 ;
+  text-align: center;
+  font-size: 3svw;
+  line-height: 4rem;
+}
+.text {
+  margin: 1rem 2rem;
+  text-align: center;
+  font-size: 3svw;
+  color: antiquewhite; 
+}
+
+/*footer*/
+.social-media {
+  display: block;
+}
+
+/* animaciones */
+@keyframes shaking {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(2px, 2px) rotate(2deg); }
+  50% { transform: translate(0, 0) rotate(0eg); }
+  75% { transform: translate(-2px, 2px) rotate(-2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/*media queries*/
+@media only screen and (max-width: 768px) {
+  #main-title {margin: 8rem 0};
+}
